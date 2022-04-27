@@ -40,7 +40,9 @@ void clearTerminal()
     UARTprintf("\e[1;1H\e[2J");
 }
 
-// Setup UART and its pins. Must be called before UARTprintf()
+/**
+ * Setup UART for receiving and transmitting data
+ */
 void initUART()
 {
     // Enable UART peripheral port (GPIO Port A)
