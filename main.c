@@ -15,9 +15,6 @@
 
 int main(int argc, char* argv[])
 {
-
     initUART();
-
-
-
+    // Test
 }
