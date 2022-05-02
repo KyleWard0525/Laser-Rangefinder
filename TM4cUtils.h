@@ -64,7 +64,7 @@ void initUART()
     // Setup UART to use console IO at 115200 baud rate
     UARTStdioConfig(0, UART_BAUD_RATE, 16000000);
 
-    const char* msg = "\r\nUART0 Initialized!";
+    const char* msg = "\nUART0 Initialized!";
 
     clearTerminal();
 
@@ -75,8 +75,19 @@ void initUART()
     UARTprintf(msg);
 }
 
+//  Wrapper function for UARTprintf()
+void print(const char* msg)
+{
+    UARTprintf(msg);
+}
 
-
+/**
+ * Convert from radians to degrees
+ */
+double radToDeg(double rads)
+{
+    return rads * (180.0 / 3.141592);
+}
 
 
 /*
